@@ -1,0 +1,34 @@
+1) Summary:
+
+The project is going to create a ML model to predict Problematic Internet Use(PIU) in children and teens. They will be participating in a corresponding Kaggle competition. 
+
+2) Strength and weaknesses:
+
+Strength:
++ Overall the project is exciting and can have impact
++ Demonstrated full understanding of the problem and the dataset. The project has clear goals.
++ Great plan on data preprocessing
+
+Weaknesses:
+RESOLVED - From the Kaggle competition website, it said "The majority of measures are missing for most participants. In particular, the target sii is missing for a portion of the participants in the training set." How are you going to resolve this issue?
+RESOLVED - Unclear validation plan -- how will you evaluate your model beyond submitting to Kaggle directly for the review? Note that this has to be done to assess performance before such a submission. 
+
+
+3) Datasets and Validation Plan
+RESOLVED - Did not specify the evaluation metric that they are going to use
+RESOLVED - How are you going to create a validation set? (Train-validation-test splits, Cross-Validation, etc.)
+
+
+4) Alignment with material covered in course:
+
+The project is aligned with material covered in course.
+
+
+5) Size and scope:
+Size and scope is suitable for a 3-person project over a 2 month period.
+
+
+6) Additional comments/suggestions:
+
+
+95/100

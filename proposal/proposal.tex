@@ -1,0 +1,79 @@
+\documentclass[11pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{cite, authblk, mdframed}
+\usepackage[margin=1in]{geometry}
+
+\title{Project Proposal}
+\author[1]{Evan Matthews}
+\author[1]{Vikram Ramavarapu}
+\author[1]{Krishnaveni Unnikrishnan}
+\affil[1]{CS 412 Group G6}
+\date{October 7th, 2024}
+
+
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+% \section{Introduction}
+
+% \begin{mdframed}
+% \textbf{AI-generated abstract, for review!}
+
+% This proposal outlines a project aimed at predicting early signs of Problematic Internet Use (PIU) in children and teens using machine learning techniques. 
+% The motivation stems from the increasing concern over the negative impacts of excessive internet use on mental health, as highlighted by various studies. 
+% The project will leverage data from the Child Mind Institute's Health Brain Network, which includes a comprehensive set of features related to children's physical activity. 
+
+% \end{mdframed}
+
+The internet has become an integral part of our daily lives, with people of all ages spending a significant amount of time online. 
+This trend has given rise to concerns about the potential impacts of excessive internet use, particularly on children and teens.
+Problematic Internet Use (PIU) is a condition characterized by excessive or poorly controlled preoccupations, urges, or behaviors regarding computer use and internet access that lead to impairment or distress \cite{Pettorruso2020-qt}. 
+PIU has been associated with a range of mental health issues, including depression, anxiety, and impulsivity \cite{Cash2012-rb}.
+As such, identifying early signs of PIU in children and teens is crucial for prevention and intervention.
+In this project, we aim to predict early signs of PIU in children and teens using machine learning techniques, leveraging data from the Child Mind Institute's Healthy Brain Network.
+The project plan consists of three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
+We will submit our work to the Child Mind Institute's (CMI) Kaggle competition on PIU prediction, and we also aim to publish our results as a paper should they outperform competition expectations.
+
+% \section{Motivation}
+
+% As the internet and online-based technology have become more pervasive in the past two decades, medical professionals have rigorously questioned the impact of excessive internet use.
+% This issue has become especially worrisome as numerous studies of children and teens have shown that excessive internet use can lead to a variety of negative outcomes \cite{Pettorruso2020-qt,Cash2012-rb,Aboujaoude2010-mc,Restrepo2020-pb}.
+% In particular, small-sample studies have shown correlations between excessive internet use and mental health issues such as depression, anxiety, and heightened impulsivity \cite{Cash2012-rb}.
+% Disorders such as ADHD, Autism Spectrum Disorder, and General Anxiety Disorder have also shown noticeable appearance among these samples\cite{Restrepo2020-pb}. 
+% The rise in these correlations has led to the definition and further study of PIU, which is similarly identified as Internet Addiction Disorder (IAD) and Compulsive/Pathological Internet Use \cite{Restrepo2020-pb}.
+
+Despite having multiple studies showing the negative effects of excessive internet use, exact details about PIU warning signs and the most at-risk individuals are still unknown.
+These studies can be useful, but their results focus primarily on written or binary feedback from students or parents. 
+These studies can be useful, but they also introduce biases and often fail to show the true factors which correlate a participant's estimated internet impact \cite{Restrepo2020-pb,Aboujaoude2010-mc}.
+
+Another major drawback of assessing PIU is in its subjective nature. 
+Problematic internet use is characterized by many different variables that are hard to measure. 
+As such, using quantitative measures such as the Severity Impairment Index (SII) allow for the application of data mining methods to aid in the classification of PIU severity. 
+Moreover, other measurable attributes such as sleep quality and duration, physical activity level, and duration of internet usage can all be used to understand correlations with PIU.
+This project intends to rectify these issues by using a machine-learning approach to predict early signs of PIU using a wider range of variables on children and teens.
+
+% \section{Data}
+
+Our project background and necessary training data originates from the ground-breaking Health Brain Network (HBN) study.
+The Child Mind Institute (CMI) has provided these items as part of an ongoing Kaggle competition for PIU prediction given features from children's physical activity. 
+The dataset consists of 81 unique features, including categorical and scoring integers, scoring floating points, and categorical string labels \cite{child-mind-institute-problematic-internet-use}.
+Data is in timeseries format, per participant, and includes information on physical activity, sleep quality, and duration, and internet usage duration.
+Given the competition and CS 412 project deadlines, we are committed to a full submission of our project to the Kaggle competition and further publication should intriguing results arise.
+% \section{Plan}
+
+Our project development timeline consists of three main phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
+In the data preprocessing phase (weeks 7-9), we will clean up the dataset, cast all features to consistent, comparable types, and determine how much of the dataset can be used in supervised and semi-supervised tasks. 
+Certain values of fields such as 1 for the \texttt{no-wear} field or \texttt{low} for the battery level field for the heartrate monitor may be excluded from the dataset to avoid skewing the results.
+Ensemble and decision tree models (XGBoost, Random Forest, Decision Trees, etc.), as well as dimensionality reduction techniques (PCA, ICA, LDA, etc.), will be used to determine the most important features for prediction.
+In the intial model evaluation phase (weeks 10-12), we will train on all available clean features and submit to Kaggle for initial review. 
+We will also use this phase to perform multi-dimensional comparisons of all features to determine which features are most important for an optimal prediction.
+Finally, in the fine-feature reevaluation phase (weeks 13-15), we will retrain our model on a finer set of features as an optimal submission to the Kaggle competition.
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}
